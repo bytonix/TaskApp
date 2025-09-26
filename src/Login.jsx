@@ -17,24 +17,22 @@ const App = () => {
     }
     },[user, navigate])
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (email === "prasad@mail.com" && password === "12345") {
-      
-      setUser(user.name =email, user.loggedIn=true)
-      
-      localStorage.setItem('user', JSON.stringify(user))
+function handleSubmit(e) {
+  e.preventDefault();
 
-      
-      
-      toast.success("Login success");
-      
+  if (email === "prasad@mail.com" && password === "12345") {
+    const newUser = { name: email, loggedIn: true };
 
-      navigate("/");
-    } else {
-      toast.error("Invalid username or password");
-    }
+    setUser(newUser);
+    localStorage.setItem("user", JSON.stringify(newUser));
+
+    toast.success("Login success");
+    navigate("/");   
+  } else {
+    toast.error("Invalid username or password");
   }
+}
+
 
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light">

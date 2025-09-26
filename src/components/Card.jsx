@@ -15,7 +15,7 @@ const CardItem = ({ icon, name, to }) => {
         >
           <div className="card-body d-flex flex-column align-items-center justify-content-center">
             <div className="display-4 text-primary mb-3">{icon}</div>
-            <h5 className="fw-bold">{name}</h5>
+            <h5 className="fw-bold text-primary">{name}</h5>
           </div>
         </div>
       </Link>

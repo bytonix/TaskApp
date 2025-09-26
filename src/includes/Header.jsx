@@ -13,21 +13,13 @@ const Navbar = () => {
   }
   return (
     <>
-      {/* Bootstrap CDN */}
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      />
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        defer
-      ></script>
+      {/* Bootstrap CSS/JS is loaded globally in index.html */}
 
       <nav className="navbar bg-dark navbar-expand-lg navbar-dark bg-gradient fixed-top shadow">
         <div className="container-fluid">
-          <a className="navbar-brand fw-bold text-uppercase" href="#">
+          <Link className="navbar-brand fw-bold text-uppercase" to="#">
             🚀 MyApp
-          </a>
+          </Link>
           <button
             className="navbar-toggler border-0"
             type="button"
@@ -43,30 +35,30 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/services">
                   Services
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link  to="/login" className="btn btn-light ms-lg-3 px-3 rounded-pill">
                   Login
                 </Link>
-              </li>
+              </li> */}
 
                <li className="nav-item">
                 <button  onClick={handleLogout} className="btn btn-light ms-lg-3 px-3 rounded-pill">
@@ -78,7 +70,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Extra spacing to push content below navbar */}
+      {/* ExtrLink spacing to push content below navbar */}
       <div style={{ marginTop: "80px" }}></div>
 
       
